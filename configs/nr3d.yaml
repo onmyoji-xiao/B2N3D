@@ -1,0 +1,41 @@
+# base
+batch_size: 20
+n_workers: 4
+data_name: nr3d
+lr: 0.0005
+max_epoch: 150
+random_seed: 2025
+
+#data
+scannet_file: ../scannet/scannet_00_views.pkl
+refer_train_file: ./data/referit3d/nr3d_train.csv
+refer_val_file: ./data/referit3d/nr3d_test.csv
+train_relation_file: ./data/nr3d_train_relation.csv
+val_relation_file: ./data/nr3d_test_relation.csv
+bert_pretrain_path: ../pretrained/bert
+clip_info_path: ./data/clip_feats_pad0.hdf5
+clip_path: ../pretrained/CLIP-ViT-B-16-laion2B-s34B-b88K/open_clip_pytorch_model.bin
+
+
+#model
+lay_number: 3
+gat_number: 2
+view_number: 4
+rotate_number: 4
+object_latent_dim: 768
+hidden_dim: 1024
+inner_dim: 768
+dropout_rate: 0.1
+lang_cls_alpha: 0.1
+pp_cls_alpha: 0.5
+max_distractors: 51
+max_test_objects: 88
+points_per_object: 1024
+head_num: 8
+use_semantic: true
+clip_pp: true
+clip_pp_dim: 768
+clip_dim: 512
+geo_dim: 8
+binary_num: 16
+n_ary_num: 16
