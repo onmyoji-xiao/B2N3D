@@ -4,11 +4,12 @@
 # B2N3D: Progressive Learning from Binary to N-ary Relationships for 3D Object Grounding
 **Feng Xiao** · **Hongbin Xu** · **Hai Ci** · **Wenxiong Kang**  
 *South China University of Technology*  
+*ByteDance Seed*  
+*National University of Singapore*
 
 [Code](https://github.com/onmyoji-xiao/B2N3D) | [Paper](#) | [Project Page](#)  
 
 </div>
-
 
 ## Environment
 ```
@@ -26,4 +27,13 @@ python setup.py install
 
 cd external_tools/open_clip
 pip install -e .
+```
+
+## Data Preparation
+### ScanNet v2
+Download the [ScanNet V2](http://www.scan-net.org/) dataset.  
+Prepare for ScanNet data and package it into "scannet_00_views.pkl" or "scannet_0x_views.pkl"
+```
+cd data
+python prepare_scannet_data.py --process-only-zero-view [1/0] -scans_dir [scannet_path]
 ```
